@@ -10,9 +10,7 @@ import com.letmedie.snakeGame.gameInterface.*;
 import com.letmedie.snakeGame.gameLogic.GameLogic;
 import com.letmedie.snakeGame.gameLogic.SnakeGameLogic;
 
-import java.awt.*;
-
-public class main {
+public class SnakeApplication {
     public static void main(String[] args) {
         Snake snake = new StandardSnake();
         Apple apple = new SimpleApple();
