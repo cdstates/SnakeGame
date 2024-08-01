@@ -12,7 +12,7 @@ public class GameData {
     private LinkedList<Point> snakeBody;
     private Point applePosition;
     private int score;
-    boolean snakeIsAlive;
+    private boolean snakeIsAlive;
 
     private List<Observer> observers;
 
