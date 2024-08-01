@@ -21,22 +21,22 @@ public abstract class Snake {
 
     public void move(Point apple) {
         Point newHead = newHeadPoint();
-        // Проверка выхода за границы доски
+
         if (newHead.getX() < 0 || newHead.getX() >= GameConstants.fieldWidth ||
                 newHead.getY() < 0 || newHead.getY() >= GameConstants.fieldHeight) {
-            headCollisions(); // Обработка выхода за границы
+            headCollisions(); 
         }
         if(!isAlive)return;
-        // Проверка на столкновение с собственным телом
+
         if (body.contains(newHead)) {
             isAlive = false;
-            return; // Выход, если змея мертва
+            return; 
         }
         body.add(head);
-        // Обновление позиции головы и тела
-        head = newHead; // Обновляем голову змеи
+
+        head = newHead; 
         if (!head.equals(apple)) {
-            body.removeFirst(); // Удаление последнего сегмента, если змея не растет
+            body.removeFirst(); 
         }
     }
 
